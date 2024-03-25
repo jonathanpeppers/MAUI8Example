@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MAUI8Example.Data;
+using MAUI8Example.Pages.Monkeys;
+using Microsoft.Extensions.Logging;
 
 namespace MAUI8Example
 {
@@ -14,6 +16,12 @@ namespace MAUI8Example
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+            builder.Services.AddSingleton<MonkeyService>();
+            builder.Services.AddTransient<MonkeyMenu>();
+            builder.Services.AddTransient<ViewMonkeys>();
+
+            Routing.RegisterRoute("monkeyMenu", typeof(MonkeyMenu));
+            Routing.RegisterRoute("monkeys", typeof(ViewMonkeys));
 
 #if DEBUG
     		builder.Logging.AddDebug();

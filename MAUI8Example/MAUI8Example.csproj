@@ -63,8 +63,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Data\Models\" />
-	  <Folder Include="Pages\" />
+	  <MauiXaml Update="Pages\Monkeys\MonkeyMenu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Monkeys\ViewMonkeys.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Resources\Styles\cStyles.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
