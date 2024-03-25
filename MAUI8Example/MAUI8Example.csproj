@@ -63,6 +63,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\Monkeys\MonkeyDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Monkeys\MonkeyMenu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

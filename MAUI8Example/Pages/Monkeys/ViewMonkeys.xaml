@@ -3,10 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI8Example.Pages.Monkeys.ViewMonkeys"
              Title="ViewMonkeys">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <StackLayout VerticalOptions="FillAndExpand">
+        <Label Text="Select Monkey" FontSize="Large" HorizontalOptions="Center" />
+        <ListView x:Name="lvMonkey" SeparatorVisibility="Default" SeparatorColor="Black"  VerticalOptions="FillAndExpand" ItemTapped="lvMonkey_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"  Grid.Row="0" Text="{Binding Name}" TextColor="Black" FontSize="Large" HorizontalOptions="Start"/>
+                            <Label Grid.Column="1" Grid.Row="0" Text="{Binding ListNumber}"  TextColor="Black" FontSize="Large" VerticalOptions="FillAndExpand"  HorizontalOptions="Start"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

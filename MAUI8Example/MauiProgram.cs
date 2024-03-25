@@ -19,12 +19,14 @@ namespace MAUI8Example
             builder.Services.AddSingleton<MonkeyService>();
             builder.Services.AddTransient<MonkeyMenu>();
             builder.Services.AddTransient<ViewMonkeys>();
+            builder.Services.AddTransient<MonkeyDetail>();
 
             Routing.RegisterRoute("monkeyMenu", typeof(MonkeyMenu));
             Routing.RegisterRoute("monkeys", typeof(ViewMonkeys));
+            Routing.RegisterRoute("monkeyDetails", typeof(MonkeyDetail));
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

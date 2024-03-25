@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI8Example.Pages.Monkeys.MonkeyDetail"
+             Title="MonkeyDetail">
+    <StackLayout BackgroundColor="White" VerticalOptions="FillAndExpand">
+        <Label x:Name="lblName" TextColor="Black" FontSize="Header" HorizontalTextAlignment="Center"/>
+
+        <Label Text="Location" TextColor="Black" FontSize="Large" />
+        <Border HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightGray" StrokeThickness="1.5" Stroke="LightGray" Margin="5,5,5,10" Padding="3" StrokeShape="RoundRectangle 5,5,5,5">
+            <Label x:Name="lblLocation" TextColor="Black" FontSize="Large"/>
+        </Border>
+
+        <Label Text="Details" TextColor="Black" FontSize="Large" />
+        <Border HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightGray" StrokeThickness="1.5" Stroke="LightGray" Margin="5,5,5,10" Padding="3" StrokeShape="RoundRectangle 5,5,5,5">
+            <Label x:Name="lblDetails" TextColor="Black" FontSize="Large"/>
+        </Border>
+
+    </StackLayout>
+</ContentPage>
