@@ -1,12 +1,17 @@
 using MAUI8Example.Data;
+using System.Diagnostics;
 
 namespace MAUI8Example.Pages.Monkeys;
 
 public partial class ViewMonkeys : ContentPage
 {
+	~ViewMonkeys() => Debug.WriteLine("ViewMonkeys destructor");
+
 	MonkeyService monkeyService;
 	public ViewMonkeys(MonkeyService service)
 	{
+		Debug.WriteLine("ViewMonkeys constructor");
+		GC.Collect();
 		InitializeComponent();
 		this.monkeyService = service;
 	}

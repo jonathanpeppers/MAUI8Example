@@ -9,6 +9,7 @@
 
         private async void btnMonkeys_Clicked(object sender, EventArgs e)
         {
+            GC.Collect();
             await Shell.Current.GoToAsync("monkeys");
         }
     }
